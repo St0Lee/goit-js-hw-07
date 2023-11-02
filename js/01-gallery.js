@@ -18,9 +18,17 @@ function openModal (event){
  const instance = basicLightbox.create(`
     <img src="${image.original}">
 `)
-instance.show()
-};
 
+instance.show();
+
+document.addEventListener("keydown", closeModal);
+   function closeModal(event) {
+      if (event.key === "Escape") {
+        instance.close();
+        document.removeEventListener("keydown", closeModal);
+      }
+};
+};
 
 function createMarkUp (arr) {
     return arr
