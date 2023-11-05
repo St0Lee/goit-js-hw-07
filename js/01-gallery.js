@@ -16,7 +16,7 @@ function openModal (event){
 //  const currentImgPrev = currentImg.querySelector("img").getAttribute("src");
 //  const image = galleryItems.find(({preview}) => preview === currentImgPrev);
  const instance = basicLightbox.create(`
-    <img src="${image.target.dataset.source}">
+    <img src="${event.target.dataset.source}">
 `)
 
 instance.show();
